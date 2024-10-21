@@ -1,13 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Timer and Countdown</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer and Countdown</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos para el cronómetro y reloj */
+        .stopwatch-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .clock {
+            margin-bottom: 20px;
+        }
+
+        .display {
+            font-size: 3rem;
+            padding: 10px 20px;
+            background-color: #e6e6fa;
+            border: 4px solid #333;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .button {
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .start {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .clear {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
 </head>
+
 <body>
-<h1>Timer and Countdown</h1>
-<script src="script.js"></script>
+    <h1>Timer and Countdown</h1>
+    <div class="stopwatch-container">
+        <!-- Reloj analógico -->
+        <canvas id="analogClock" class="clock" width="200" height="200"></canvas>
+        <!-- Cronómetro digital -->
+        <div id="display" class="display">00:00:00.000</div>
+        <!-- Botones -->
+        <div class="buttons">
+            <button id="startButton" class="button start">Start</button>
+            <button id="clearButton" class="button clear">Clear</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>
